@@ -25,10 +25,10 @@ class Etudiant extends Model
         'groupe',
     ];
     
-    public function comments()
-    {
+        public function comments()
+        {
         return $this->hasMany(Comment::class);
-    }
+        }
       
         public function image()
         {

@@ -83,7 +83,7 @@
               @endforeach
               </select>
               </div>
-              
+              <br> <br> 
             <button type="submit" class="btn btn-primary">AJOUTER UN ETUDIANT</button>
             <br> <br> 
             <a href="/etudiant" class="btn btn-danger">Revenir à liste des etudiants</a>

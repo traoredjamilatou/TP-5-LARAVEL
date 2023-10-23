@@ -19,13 +19,13 @@
                     <hr/>
                     {{-- <a href="/ajouter2" class="btn btn-primary"
                     >Ajouter un tuteur</a> --}}
-                    <a href="/ajouter" class="btn btn-primary"
-                        >Ajouter un etudiant</a>
-                        <a href="/tuteur" class="btn btn-primary">Revenir à liste des tuteurs</a>
-                        <a href="/post" class="btn btn-danger">Revenir à liste des post</a>
-                        {{-- <a href="/etudiant" class="btn btn-danger">Ajoute un POST</a> --}}
-                        <a href="/tag" class="btn btn-danger">Revenir à liste des tag</a>
+                    <a href="/ajouter3" class="btn btn-primary"
+                        >Ajouter un tag</a>
+                    <a href="/etudiant" class="btn btn-danger">Revenir à liste des etudiants</a>
+                    <a href="/post" class="btn btn-danger">Revenir à liste des post</a>
 
+                        {{-- <a href="/tag" class="btn btn-danger">Revenir à liste des tag</a> --}}
+                        {{-- <a href="/etudiant" class="btn btn-danger">Ajoute un POST</a> --}}
                         {{-- <a href="/etudiant" class="btn btn-danger">Ajoute un TAG</a> --}}
                     <hr/>
                     @if (session('status'))
@@ -38,38 +38,23 @@
                             <tr>
                                 <th>#</th>
                                 <th>Nom</th>
-                                <th>Prenom</th>
-                                <th>Classe</th>
-                                <th>Images</th>
-                                <th>Ville</th>
-                                <th>Nationalite</th>
-                                <th>Groupe sanguin</th>
-                                <th>Tuteur</th>
                                 <th>Actions</th>
                             </tr>
                         </thead>
                         <tbody>
                         
-                             @foreach ($etudiants as $etudiant)
+                             @foreach ($tags as $tag)
                             <tr>
-                                <td>{{ $etudiant->id }}</td>
-                                <td>{{ $etudiant->nom }}</td>
-                                <td>{{ $etudiant->prenom }}</td>
-                                <td>{{ $etudiant->classe }}</td>
-                                <td> <img src="/images/{{ $etudiant->images }}" alt="" style="width: 60px; height:60px; border-raduis:50px;"> </td>
-                                <td>{{ $etudiant->ville->ville  }}</td>
-                                <td>{{ $etudiant->nationalite->nationalite }}</td>
-                                <td>{{ $etudiant->groupe->groupe }}</td>
-                                <td>{{ $etudiant->tuteur->nom}} {{$etudiant->tuteur->prenom}}</td>
-                                
+                                <td>{{ $tag->id }}</td>
+                                <td>{{ $tag->nom }}</td>
                                 <td>
                                     <a
-                                        href="/update-etudiant/{{ $etudiant->id }}"
+                                        href="/update-tag/{{ $tag->id }}"
                                         class="btn btn-info"
                                         >Update</a
                                     >
                                     <a
-                                        href="/delete-etudiant/{{ $etudiant->id }}"
+                                        href="/delete-tag/{{ $tag->id }}"
                                         class="btn btn-danger"
                                         >Delete</a
                                     >
