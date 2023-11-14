@@ -21,6 +21,8 @@
                     <a href="/ajouter4" class="btn btn-primary"
                         >Ajouter un post</a>
                         <a href="/etudiant" class="btn btn-danger">Revenir à liste des etudiants</a>
+                        <a href="/tag" class="btn btn-primary ">Revenir à liste des tag</a>
+
                         {{-- <a href="/post" class="btn btn-danger">Revenir à liste des post</a> --}}
                         
                     <hr/>
@@ -34,6 +36,8 @@
                             <tr>
                                 <th>#</th>
                                 <th>Nom</th>
+                                <th>contenu</th>
+                                <th>Tag</th>
                                 <th>Actions</th>
                             </tr>
                         </thead>
@@ -43,6 +47,13 @@
                             <tr>
                                 <td>{{ $post->id }}</td>
                                 <td>{{ $post->nom }}</td>
+                                <td>{{ $post->contenu }}</td>
+                               
+                                 <td>
+                                    @foreach ($post->tags as $tag)
+                                        {{ $tag->nom }}</td>
+                                        <br>
+                                    @endforeach
                                 <td>
                                     <a
                                         href="/update-post/{{ $post->id }}"

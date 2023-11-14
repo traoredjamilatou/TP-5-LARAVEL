@@ -30,16 +30,29 @@
        
         <form action="/update4/traitement" method="POST" class="form-group">
         @csrf
-        
-        <input type="text" name="id" style="display: none;" value="{{$Posts->id}}">
+
+        <input type="text" name="id" style="display: none;" value="{{$posts->id}}">
         
             <div class="form-group">
               <label for="Nom">Nom</label>
-              <input type="text" class="form-control" id="Nom" name="nom" value="{{$Posts->nom}}">
+              <input type="text" class="form-control" id="Nom" name="nom" value="{{$posts->nom}}">
             </div>
            
-              <br> 
+            <div class="form-group">
+              <label for="Contenu">Contenu</label>
+              <input type="text" class="form-control" id="Contenu" name="contenu" value="{{$posts->contenu}}">
+            </div>
+              
+            <div class="form-floating">
+              <div><label for="tag" class="form-label">Tag</label></div>
+              <select class="form-select" id="tag" aria-label="Floating label select example" name="tag">
+              @foreach($tags as $tag)
+              <option value="{{$tag->id}}">{{$tag->nom}}</option>
+              @endforeach
+              </select>
+              </div>
              
+                <br> 
             <button type="submit" class="btn btn-primary">MODIFIER UN post</button>
             <br> <br> 
             <a href="/post" class="btn btn-danger">Revenir à liste des post</a>

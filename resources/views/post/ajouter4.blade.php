@@ -34,6 +34,19 @@
               <label for="Nom">Nom</label>
               <input type="text" class="form-control" id="Nom" name="nom">
             </div>
+            <div class="form-group">
+              <label for="Contenu">Contenu</label>
+              <input type="text" class="form-control" id="Contenu" name="contenu">
+            </div>
+            
+            <div class="form-floating">
+              <div><label for="tag" class="form-label">Tag</label></div>
+              <select class="form-select" id="tag_id" aria-label="Floating label select example" name="tag_id">
+              @foreach($tags as $tag)
+              <option value="{{$tag->id}}">{{$tag->nom}}</option>
+              @endforeach
+              </select>
+              </div>
             <br> <br> 
             <button type="submit" class="btn btn-primary">AJOUTER UN post</button>
             <br> <br> 

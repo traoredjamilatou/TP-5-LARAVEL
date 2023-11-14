@@ -37,7 +37,8 @@
               <label for="Nom">Nom</label>
               <input type="text" class="form-control" id="Nom" name="nom" value="{{$tags->nom}}">
             </div>
-           
+            
+
               <br> 
              
             <button type="submit" class="btn btn-primary">MODIFIER UN tag</button>

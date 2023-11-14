@@ -22,9 +22,8 @@
                     <a href="/ajouter3" class="btn btn-primary"
                         >Ajouter un tag</a>
                     <a href="/etudiant" class="btn btn-danger">Revenir à liste des etudiants</a>
-                    <a href="/post" class="btn btn-danger">Revenir à liste des post</a>
+                    <a href="/post" class="btn btn-primary">Revenir à liste des post</a>
 
-                        {{-- <a href="/tag" class="btn btn-danger">Revenir à liste des tag</a> --}}
                         {{-- <a href="/etudiant" class="btn btn-danger">Ajoute un POST</a> --}}
                         {{-- <a href="/etudiant" class="btn btn-danger">Ajoute un TAG</a> --}}
                     <hr/>

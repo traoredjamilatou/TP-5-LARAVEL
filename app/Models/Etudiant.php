@@ -54,7 +54,5 @@ class Etudiant extends Model
        {
            return $this->belongsTo(Tuteur::class);
        }
-       
-       
-  
+
 }

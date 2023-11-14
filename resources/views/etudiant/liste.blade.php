@@ -67,7 +67,7 @@
                                         href="/update-etudiant/{{ $etudiant->id }}"
                                         class="btn btn-info"
                                         >Update</a
-                                    >
+                                    ><br>
                                     <a
                                         href="/delete-etudiant/{{ $etudiant->id }}"
                                         class="btn btn-danger"

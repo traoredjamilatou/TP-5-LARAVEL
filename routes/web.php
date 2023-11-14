@@ -7,7 +7,6 @@ use App\Http\controllers\TagController;
 use App\Http\controllers\PostController;
 
 
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes

@@ -34,7 +34,9 @@
               <label for="Nom">Nom</label>
               <input type="text" class="form-control" id="Nom" name="nom">
             </div>
-            <br> <br> 
+            
+            
+              <br> <br> 
             <button type="submit" class="btn btn-primary">AJOUTER UN tag</button>
             <br> <br> 
             <a href="/tag" class="btn btn-danger">Revenir à liste des tag</a>
